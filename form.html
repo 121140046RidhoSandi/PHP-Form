@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="validate.js" defer></script>
+</head>
+<body>
+    <form action="process.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <h2>Form Pendaftaran</h2>
+        
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required minlength="3" maxlength="50">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="age">Umur:</label>
+        <input type="number" id="age" name="age" min="1" max="100" required>
+        
+        <label for="bio">Biografi (Max 200 karakter):</label>
+        <textarea id="bio" name="bio" maxlength="200" required></textarea>
+        
+        <label for="file">Upload File Teks:</label>
+        <input type="file" id="file" name="file" accept=".txt" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Ridho (Muionn) Sandi</p>
+        </footer>
+    
+</body>
+</html>
